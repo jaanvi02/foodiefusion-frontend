@@ -1,6 +1,7 @@
 import React from 'react'
 import Delete from '@mui/icons-material/Delete';
 import { useCart,useDispatch } from '../Contextreducer';
+const baseurl="https://mernapp1-961s.onrender.com/";
 export default function Cart() {
   let data = useCart();
   let dispatch = useDispatch();
@@ -22,7 +23,7 @@ export default function Cart() {
     let userEmail = localStorage.getItem("userEmail");
   
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("http://localhost:3000/api/orderData", {
+    let response = await fetch(`${baseurl}/orderData`, {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
