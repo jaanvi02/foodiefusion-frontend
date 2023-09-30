@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import Cards from "../Cards";
 import Footer from "../Footer";
 // import Carousel from "../Carousel";
-const baseurl="https://mernapp1-961s.onrender.com/";
+const baseurl="https://mernapp1-961s.onrender.com";
 export default function Home() {
   const [search,setsearch]=useState("");
   const [foodcat, setfoodcat] = useState([]);
