@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-const baseurl="https://mernapp1-961s.onrender.com/";
+const baseurl="https://mernapp1-961s.onrender.com";
 export default function Myorder() {
   const [orderData, setOrderData] = useState([]);
 
