@@ -1,7 +1,7 @@
 import React from 'react'
 import Delete from '@mui/icons-material/Delete';
 import { useCart,useDispatch } from '../Contextreducer';
-const baseurl="https://mernapp1-961s.onrender.com/";
+const baseurl="https://mernapp1-961s.onrender.com";
 export default function Cart() {
   let data = useCart();
   let dispatch = useDispatch();
