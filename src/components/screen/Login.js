@@ -1,12 +1,13 @@
 import React,{useState} from 'react'
 import {Link,useNavigate} from "react-router-dom"
+const baseurl="https://mernapp1-961s.onrender.com/";
 export default function Login() {
   let navigate=useNavigate();
   const[credentials,setcredentials]=useState({Email:"",Password:""})
   const [alertVisible, setAlertVisible] = useState(false);
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:3000/api/loginuser", {
+        const response = await fetch(`${baseurl}/loginuser`, {
           method: 'POST',
           headers: {
             'Content-type': 'application/json'
