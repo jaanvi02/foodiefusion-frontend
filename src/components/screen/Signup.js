@@ -1,12 +1,13 @@
 import { useState } from "react"
 import React from 'react'
 import {Link,useNavigate} from "react-router-dom"
+const baseurl="https://mernapp1-961s.onrender.com/";
 export default function Signup() {
   let navigate=useNavigate();
     const[credentials,setcredentials]=useState({name:"",Email:"",Password:"",location:""})
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:3000/api/createuser", {
+        const response = await fetch(`${baseurl}/createuser`, {
           method: 'POST',
           headers: {
             'Content-type': 'application/json'
