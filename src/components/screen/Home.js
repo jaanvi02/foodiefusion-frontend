@@ -3,14 +3,14 @@ import Navbar from "../Navbar";
 import Cards from "../Cards";
 import Footer from "../Footer";
 // import Carousel from "../Carousel";
-
+const baseurl="https://mernapp1-961s.onrender.com/";
 export default function Home() {
   const [search,setsearch]=useState("");
   const [foodcat, setfoodcat] = useState([]);
   const [fooditem, setfooditem] = useState([]);
 
   const loaddata = async () => {
-    let response = await fetch("http://localhost:3000/api/fooddata", {
+    let response = await fetch(`${baseurl}/fooddata`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
